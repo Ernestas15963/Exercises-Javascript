@@ -5,7 +5,7 @@
 function rpsGame(yourChoice){
     console.log(yourChoice);
     
-    var humanChoice, botChoice;
+    let humanChoice, botChoice;
     humanChoice = yourChoice.id;
     
    
@@ -38,14 +38,14 @@ function numberToChoice(number){
 
 
 function decideWinner(yourChoice, computerChoice){
-    var rpsDatabase = {
+    let rpsDatabase = {
         'rock': {'scissors': 1, 'rock': 0.5, 'paper': 0},
         'paper': {'rock': 1, 'paper': 0.5, 'scissors': 0},
         'scissors': {'paper': 1, 'scissors': 0.5, 'rock': 0},
     };
 
-    var yourScore = rpsDatabase[yourChoice][computerChoice];
-    var computerScore = rpsDatabase[computerChoice][yourChoice];
+    let yourScore = rpsDatabase[yourChoice][computerChoice];
+    let computerScore = rpsDatabase[computerChoice][yourChoice];
     return[yourScore, computerScore];
 }
 
@@ -66,7 +66,7 @@ function finalMessage([yourScore, computerScore]){
 
 
 function rpsFrontEnd(humanImageChoice, botImageChoice, finalMessage){
-    var imagesDataBase = {
+    let imagesDataBase = {
         'rock': document.getElementById('rock').src,  
         'paper': document.getElementById('paper').src,
         'scissors': document.getElementById('scissors').src
@@ -79,9 +79,9 @@ function rpsFrontEnd(humanImageChoice, botImageChoice, finalMessage){
 
 
     
-    var humanDiv = document.createElement('div');
-    var botDiv = document.createElement('div');
-    var messageDiv = document.createElement('div');
+    let humanDiv = document.createElement('div');
+    let botDiv = document.createElement('div');
+    let messageDiv = document.createElement('div');
 
 
 
